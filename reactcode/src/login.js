@@ -16,7 +16,7 @@ function Login(props) {
       <label>Password </label>
       <input
         name="password"
-        type="text"
+        type="password"
         placeholder="enter email"
         value={props.password}
         onChange={props.onChangeEvent}

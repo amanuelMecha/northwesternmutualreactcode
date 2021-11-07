@@ -16,12 +16,12 @@ router.get("/", function (req, res) {
     });
 });
 
-//signin;
+//login;
 router.post("/login", (req, res) => {
-  console.log("login possss", req);
+  console.log("loginsssssssssss possss", req);
   req.db
     .collection("users")
-    .findOne({ email: req.body.email })
+    .findOne({ $and: [{ email: req.body.email, password: req.body.password }] })
     .then((data) => {
       console.log("newwwwwwwwwwwww", data);
       if (data) {
