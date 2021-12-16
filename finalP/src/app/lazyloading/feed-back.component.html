@@ -1,0 +1,17 @@
+<p>feed-back works!</p>
+
+<form [formGroup]="myform" (ngSubmit)="submitfun()">
+  <label>fullname</label>
+  <input formControlName="fullname" />
+  <label>email</label>
+  <input formControlName="email" />
+  <label>message</label>
+  <div *ngIf="countMessage">
+    <p>{{ 10 - count }}</p>
+  </div>
+
+  <input formControlName="message" />
+
+  <button [disabled]="!myform.valid">submit</button>
+  <p>{{ count }}</p>
+</form>
